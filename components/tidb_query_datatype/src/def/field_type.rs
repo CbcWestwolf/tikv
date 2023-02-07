@@ -152,6 +152,7 @@ pub enum Charset {
     Utf8Mb4,
     Latin1,
     Gbk,
+    Gb18030,
     Binary,
     Ascii,
 }
@@ -162,6 +163,7 @@ impl Charset {
             "utf8mb4" => Ok(Charset::Utf8Mb4),
             "utf8" => Ok(Charset::Utf8),
             "latin1" => Ok(Charset::Latin1),
+            "gb18030" => Ok(Charset::Gb18030),
             "gbk" => Ok(Charset::Gbk),
             "binary" => Ok(Charset::Binary),
             "ascii" => Ok(Charset::Ascii),
@@ -557,6 +559,7 @@ mod tests {
     fn test_charset_from_str() {
         let cases = vec![
             ("gbk", Some(Charset::Gbk)),
+            ("gb18030", Some(Charset::Gb18030)),
             ("utf8mb4", Some(Charset::Utf8Mb4)),
             ("utf8", Some(Charset::Utf8)),
             ("binary", Some(Charset::Binary)),

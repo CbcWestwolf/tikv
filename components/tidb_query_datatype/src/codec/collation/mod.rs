@@ -79,6 +79,7 @@ macro_rules! match_template_charset {
                  Utf8Mb4 => EncodingUtf8Mb4,
                  Latin1 => EncodingLatin1,
                  Gbk => EncodingGbk,
+                 Gb18030 => EncodingGbk,
                  Binary => EncodingBinary,
                  Ascii => EncodingAscii,
             ],
